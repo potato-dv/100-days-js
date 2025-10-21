@@ -10,7 +10,7 @@
  * reset() sets the current value to init and then returns it.
 */
 
-// using let is more safe here to avouid global variuables issue.
+// using let is more safe here to avoid global variables issue.
 // using var to this createCounter function will cause issues if there are multiple counters created.
 
 var createCounter = function (init) {
