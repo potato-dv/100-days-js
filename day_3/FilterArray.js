@@ -34,13 +34,13 @@ function greaterThan10(n) {
     return n > 10;
 }
 
-const arr2 = [1, 2, 3];
+
 function firstIndex (n, i) {
     return i === 0;
 }
 
 function plusOne(n) {
-    return n + 1 > 0;
+    return n + 1;
 }
 
 console.log(filter([0, 10, 20, 30], greaterThan10));
