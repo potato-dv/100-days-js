@@ -19,7 +19,16 @@ var compose = function(functions) {
     };
 };
 
-const fn = compose([x => x + 1, x => x * x, x => 2 * x]);
-console.log(fn(4)); // 65
+// *****example how can i test the compose function.****
+// const fn = compose([x => x + 1, x => x * x, x => 2 * x]);
+// console.log(fn(4)); // 65
 
+function add(x) {
+    x = 2 * x;
+    x = x * x;
+    x = x + 1;
+    return x;
+}
+
+console.log(add(4));
  
