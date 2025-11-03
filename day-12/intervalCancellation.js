@@ -7,7 +7,8 @@
    function cancelFn will be invoked.
 
  * setTimeout(cancelFn, cancelTimeMs)
-   The function fn should be called with args immediately and then called again every t milliseconds until cancelFn is called at cancelTimeMs ms.
+   The function fn should be called with args immediately and then called again 
+   every t milliseconds until cancelFn is called at cancelTimeMs ms.
 */
 
 var cancellable = function (fn, args, t) {
