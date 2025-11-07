@@ -38,4 +38,6 @@ function log(...args) {
 const sumlog = debounce(log, 50)
 
     setTimeout(() => sumlog(1), 50);
-    setTimeout(() => sumlog(2), 75);
+    setTimeout(() => sumlog(2), 75); /** if the second one is called within 50ms of the first,
+                                         the first is cancelled but if the second is called after 
+                                    * /  50ms of the first, it will execute.
