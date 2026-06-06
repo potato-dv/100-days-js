@@ -11,17 +11,38 @@
 
 Array.prototype.groupBy = function(fn) {
     const result = {};
+    
+    for  (let i = 0; i < this.length; i++) {
 
-    for (let i = 0; i < this.length; i++) {
         const item = this[i];
+        // console.log("Item", item);
+
         const key = fn(item);
+        // console.log("Key", key);
 
         if (!result[key]) {
             result[key] = [];
         }
-
         result[key].push(item);
-    }
 
+    }
     return result;
 };
+
+//test cases
+
+// const user = [1, 2, 3, 4, 5];
+
+// const result = numbers.groupBy(num => num % 2 === 0  ? "even" : "odd");
+
+const user = [{name: "liezl", sex: "female"},
+              {name: "lauris", sex: "male"},
+              {name: "francis", sex: "male"},
+              {name: "Prince", sex: "male"},
+              {name: "jiezlin", sex: "female"},
+              {name: "lebron", sex: "damn"}
+];
+
+const result = user.groupBy(user => user.sex);
+
+console.log(result); 
