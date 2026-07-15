@@ -21,19 +21,30 @@ class ArrayWrapper {
         return this.nums.reduce((currentValue, currentNumber) => currentValue + currentNumber, 0);
             }
             toString() {
-                return `[${this.nums.join(",")}]`;
+                return `[${this.nums.join("-")}]`;
             }
 }
 
 // test cases
-const arr1 = new ArrayWrapper([1, 2, 3]);
+// const arr1 = new ArrayWrapper([1, 2, 3]);
 // const arr2 = new ArrayWrapper([4, 5, 6]);
-// const arr3 = new ArrayWrapper(["Hi, tubol"]);
+const arr3 = new ArrayWrapper(["may left ba sa right", "dipende kung 3 yan", "kamote ka ngane"]);
 
 // console.log(arr1 + arr2);
 
 // console.log(String(arr1)); 
-// console.log(String(arr3));
-console.log(arr1.valueOf());
-console.log(arr1);
+console.log(String(arr3));
+// console.log(arr1.valueOf());
+// console.log(arr1);
 
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// const person1 = new Person("john", 30);
+
+// console.log(person1.name);
+// console.log(person1.age);
