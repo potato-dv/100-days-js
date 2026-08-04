@@ -21,7 +21,7 @@ function analyzeText(text) {
     const longestWord = words.reduce((longest, currentWord) => {
         return currentWord.length > longest.length ? currentWord : longest;
     }, ""); // "" is initial for safety only becasue we assume what if theres no input it could be error, so we use "" as initial value to avoid error and the code will run.
-
+            // could be use if not object.
     const cleanedText = text.toLowerCase().replace(/[^a-z0-9]/g, ""); // toLowerCase() converts the string to lowercase, and replace(/[^a-z0-9]/g, "") removes all non-alphanumeric characters (punctuation, spaces, etc.) from the string.
 
     const charFrequency = {};

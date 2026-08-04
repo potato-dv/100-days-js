@@ -1,7 +1,7 @@
 // // Topics: Arrays, reduce(), objects
 
 // // You are given an array of product objects.
-
+z
 // // Return an object containing:
 
 // // totalProducts → total number of products
