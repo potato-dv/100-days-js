@@ -24,7 +24,7 @@ class Calculator {
     add(value) {
         this.result += value;
 
-        // return the updated calculator so we can contnue chaining
+        // return the updated calculator so we can continue chaining
         return this;
     }
     subtract(value) {
