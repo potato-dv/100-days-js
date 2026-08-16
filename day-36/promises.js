@@ -67,8 +67,8 @@ function prepareOrder(order) {
 
     const preparationStatus = preparationFailed ? "Order preparation failed" : "Order prepared";
     
-    const preparationPromise = new Promise((resolve, reject) =>{
-        setTimeout(() => {
+    const preparationPromise = new Promise((resolve, reject) => {
+        setTimeout(() => { 
             console.log(preparationStatus);
             return preparationFailed ? reject("Order preparation failed for order " + order.id) : resolve(order);
         }, 1000);
@@ -106,5 +106,3 @@ const order1 = { id:101, paymentApproved: true };
 
 processOrder(order1);
 // processOrder(order2);
-
-
