@@ -26,8 +26,8 @@
 async function getGithubProfile(username) {
     const response = await fetch (`https://api.github.com/users/${username}`);
 
-    console.log(response.ok);
-    console.log(response.status);
+     console.log(response.ok);
+     console.log(response.status);
 
     if (!response.ok) {
         throw new Error("User not found");
