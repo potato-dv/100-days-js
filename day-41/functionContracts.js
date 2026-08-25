@@ -19,23 +19,28 @@
 export function createUserProfile(name, email, options = {}) {
     if (!name || !email) {
         throw new Error("Some required parameters are missing");
-    }
+    } else {
     return {
         name, 
         email, 
-        role:   options.role || "user", 
-        active: options.active ?? true
+        options: {
+            role:   options.role || "user", 
+            active: options.active ?? true
+        }
     }
+}
 };
 
 // test cases
-const profile = createUserProfile(
-    "Lauris",
-    "l@example.com",
-    {
-        role: "student",
-        active: false
-    }
-);
+// const profile = createUserProfile(
+//     "Lauris",
+//     "l@example.com"
+//     // {
+//     //     role: "",
+//     //     active: true
+//     // }
+// );
 
-console.log(profile);
+// console.log(profile);
+
+console.log(createUserProfile("Lauris", "l@example.com"));
