@@ -16,15 +16,6 @@
 // Bonus: Map each error class to a future HTTP status code.
 // Main skill gained: Creating an error vocabulary that later becomes consistent API responses.
 
-const registrationData = {
-    name: "yvann",
-    email: "nobita@gmail.com",
-    password: "securepassword"
-};
-
-const existingEmails = ["lauris@example.com", "john@example.com"];
-
-
 class ValidationError extends Error {
     constructor(message, details) {
         super(message);
@@ -55,16 +46,19 @@ function validateRegistration(data) {
     if (!data.password) {
         throw new ValidationError("Password is required", { field: "password"});
     }
+};
+
+function registerUser(data){
+    validateRegistration(data);
+
     if (existingEmails.includes(data.email)) {
-        throw new ConflictError("Email already exists", { field: "email" });
+            throw new ConflictError("Email already exists", { field: "email" });
     }
 };
 
-
-//test cases
-
+function handleRegistration(data) {
 try {
-    validateRegistration(registrationData);
+    registerUser(data);
     console.log("Registration data is valid.");
 
 } catch (error) {
@@ -79,4 +73,14 @@ try {
     } else {
         console.error("Unexpected error:", error);
     }
-;}
+}
+}
+const existingEmails = ["lauris@example.com", "john@example.com"];
+
+const registrationData = {
+    name: "yvann",
+    email: "nobita@gmail.com",
+    password: "securepassword"
+};
+
+handleRegistration(registrationData);
