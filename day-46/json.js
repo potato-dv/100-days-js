@@ -26,12 +26,25 @@ export function safeParseJson(text) {
 
 export function serializePublicUser(user) {
     const { passwordHash, ...publicUser } = user;
-    return JSON.stringify(publicUser);
+    return JSON.stringify(publicUser, replacer);
 };
+
+function replacer(key, value) {
+    if(typeof value === "bigint") {
+        return value.toString();
+    } else if (typeof value === "undefined") {
+        return null;
+    } else if (value instanceof Date) {
+        return value.toDateString();
+    } else {
+        return value;
+    }
+}
 
 // test cases
 
 const testData = { 
+    id: 21343245345345n,
     name: "Alice",
     nickname: undefined,
     age: 30,
@@ -40,11 +53,11 @@ const testData = {
     passwordHash: "secret123"
 }
 
-const parsedValid = safeParseJson(JSON.stringify(testData));
-console.log(parsedValid);
+// const parsedValid = safeParseJson(JSON.stringify(testData, replacer));
+// console.log(parsedValid);
 
-const serializedUser = serializePublicUser(testData);
-console.log(serializedUser);
+// const serializedUser = serializePublicUser(testData);
+// console.log(serializedUser);
 
 const invalidJson = "{banana}";
 const parsedInvalid = safeParseJson(invalidJson);
