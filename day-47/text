@@ -1,0 +1,9 @@
+ // if(!bookings.id) {
+    //     throw new ValidationError("ID is required", { field: "id" });
+    // }
+    // if(!bookings.status) {
+    //     throw new ValidationError("Status is required", { field: "status" });
+    // }
+    // if(!bookings.service) {
+    //     throw new ValidationError("Service is required", { field: "service" });
+    // }    

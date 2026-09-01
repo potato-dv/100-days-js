@@ -62,4 +62,3 @@ const testData = {
 const invalidJson = "{banana}";
 const parsedInvalid = safeParseJson(invalidJson);
 console.log(parsedInvalid);
-
