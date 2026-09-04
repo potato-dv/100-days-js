@@ -6,4 +6,4 @@
     // }
     // if(!bookings.service) {
     //     throw new ValidationError("Service is required", { field: "service" });
-    // }    
+    // }     
