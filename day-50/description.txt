@@ -1,0 +1,14 @@
+MEDIUM  |  import/export, named/default exports, package type, module responsibility
+Objective: Split a program into understandable, reusable modules.
+Challenge: Refactor a single-file order calculator into config, utils, services, and index modules.
+Requirements
+    • Use ESM consistently.
+    • Avoid circular imports.
+    • Export only what another module needs.
+Example: import { calculateTotal } from "./services/orderService.js";
+Starter code
+export function calculateTotal(items) { /* ... */ }
+Constraints
+    • Every file must have a clear reason to exist.
+    • No duplicated helper logic.
+Bonus: Draw the import dependency direction.
