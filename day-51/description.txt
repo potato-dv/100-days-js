@@ -1,0 +1,16 @@
+EASY  |  node:path, import.meta.url, process.env, cross-platform paths
+Objective: Handle file locations and configuration without hard-coded machine-specific values.
+Challenge: Build a config inspector that resolves a data path and reads PORT from the environment.
+Requirements
+    • Provide a safe default port.
+    • Convert the port to a number.
+    • Reject invalid port values.
+Example: PORT=4000 node src/index.js -> resolved config with port 4000
+Starter code
+const port = Number(process.env.PORT ?? 3000);
+// resolve data path with node:path
+Constraints
+    • No absolute personal filesystem paths.
+    • Keep secrets out of output.
+Bonus: Support NODE_ENV with allowed values.
+Main skill gained: Separating configuration from code.

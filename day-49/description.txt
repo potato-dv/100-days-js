@@ -1,0 +1,16 @@
+EASY  |  npm, package.json, scripts, dependencies, devDependencies, lockfiles
+Objective: Understand how a Node project declares and runs its tools.
+Challenge: Initialize a project and create start, dev, and test scripts.
+Requirements
+    • Use a valid package name.
+    • Explain dependencies versus devDependencies.
+    • Commit package-lock.json in the exercise repository.
+Example: npm run start -> executes node src/index.js
+Starter code
+{
+  "scripts": {"start": "node src/index.js", "test": "node --test"}
+}
+Constraints
+    • Do not install a package unless you can state why it is needed.
+    • Do not edit node_modules.
+Bonus: Inspect one installed package version range and explain ^.
