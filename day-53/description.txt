@@ -1,0 +1,16 @@
+MEDIUM  |  Repository pattern, CRUD, file persistence, ids
+Objective: Hide storage details behind a small data-access API.
+Challenge: Build create, findAll, findById, update, and remove functions for users.json.
+Requirements
+    • Generate unique ids.
+    • Return null for a missing record.
+    • Preserve unrelated fields during patch-style updates.
+Example: await repository.update("u2", {active: false}) -> updated user
+Starter code
+export function createUserRepository(filePath) {
+  return { findAll, findById, create, update, remove };
+}
+Constraints
+    • Only the repository may access the file.
+    • Do not expose its internal array for mutation.
+Bonus: Prevent duplicate emails.

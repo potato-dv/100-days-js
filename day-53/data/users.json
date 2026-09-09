@@ -1,0 +1,25 @@
+[
+  {
+    "id": "u1",
+    "name": "Lauris Jay",
+    "email": "lauris.jay@gmail.com",
+    "active": false
+  },
+  {
+    "id": "u2",
+    "name": "Richard Gwapito",
+    "email": "richard.gwapito@gmail.com",
+    "active": true
+  },
+  {
+    "id": "u3",
+    "name": "Moriel Pogi",
+    "email": "moriel.pogi@gmail.com",
+    "active": true
+  },
+  {
+    "id": "69b9bd83-e9b0-4583-92d3-468a02c07572",
+    "name": "Lebron Malupiton",
+    "email": "lebron.malupiton@example.com"
+  }
+]

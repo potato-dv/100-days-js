@@ -1,0 +1,17 @@
+MEDIUM  |  node:fs/promises, readFile, writeFile, async I/O
+Objective: Persist and retrieve data using non-blocking file APIs.
+Challenge: Create readJson(path) and writeJson(path, data) utilities.
+Requirements
+    • Use UTF-8 explicitly.
+    • Handle missing files.
+    • Pretty-print JSON.
+    • Surface malformed JSON clearly.
+Example: await writeJson("data/users.json", users); await readJson(...) -> users
+Starter code
+import { readFile, writeFile } from "node:fs/promises";
+// implement both functions
+Constraints
+    • Do not use sync file methods.
+    • Do not swallow filesystem errors.
+Bonus: Write atomically via a temporary file and rename.
+Main skill gained: Using async I/O—the same pattern used by database calls.
