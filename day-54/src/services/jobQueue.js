@@ -14,22 +14,25 @@ class jobQueue extends EventEmitter {
         if(!job) {
             return;
         }
-        
+
+        const startTime = Date.now();
+
         setTimeout(() => {
+            const duration = Date.now() - startTime;
             console.log(`Processing job: ${job.id}`);
 
             if (job.shouldFail) {
-                const error = new Error(`Job ${job.id} failed`);
+                const err = new Error(`Job ${job.id} failed`);
 
-                this.emit("error", error);
+                this.emit("error", { err, duration });
+                this.emit("failed", { job, duration });
 
-                this.emit("failed", job);
             } else {
-            this.emit("completed", job);
+            this.emit("completed", { job, duration });
             }
 
             this.process();
-        }, job.duration);
+        });
 
     }
 } 

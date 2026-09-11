@@ -2,16 +2,16 @@ import jobQueue from "./services/jobQueue.js";
 
 const queue = new jobQueue();
 
-queue.on("error", (err) => {
+queue.on("error", ({ err, job, duration }) => {
     console.error(`Queue error: ${err.message}`);
 });
 
-queue.on("completed", (job) => {
-    console.log(`Job completed: ${job.id}`);
+queue.on("completed", ({ job, duration }) => {
+    console.log(`Job completed: ${job.id} in ${duration}ms`);
 });
 
-queue.on("failed", (job) => {
-    console.log(`Job failed: ${job.id}`);
+queue.on("failed", ({ job, duration }) => {
+    console.log(`Job failed: ${job.id} in ${duration}ms`);
 });
 
 const jobs = [
