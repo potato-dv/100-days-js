@@ -32,7 +32,7 @@ class jobQueue extends EventEmitter {
             }
 
             this.process();
-        });
+        }, job.duration);
 
     }
 } 

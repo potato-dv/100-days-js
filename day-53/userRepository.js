@@ -28,7 +28,7 @@ export function createUserRepository(filePath) {
         users.push(newUser);
         await file.writeFile(filePath, JSON.stringify(users, null, 2), "utf-8");
 
-       return newUser;
+       return newUser;  
 };
 
      async function update(id, updatedUser) {
