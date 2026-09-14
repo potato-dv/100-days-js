@@ -21,12 +21,12 @@ export function createTaskRepository(filePath) {
             } else {
                 return Math.max(...tasks.map(task => task.id)) + 1;
             }
-        };
+        }
 
         const newTask = {
             id: getNextId(),
             ...task
-        };
+        }
 
         tasks.push(newTask);
         await file.writeFile(filePath, JSON.stringify(tasks, null, 2), "utf-8");
@@ -56,7 +56,7 @@ export function createTaskRepository(filePath) {
         await file.writeFile(filePath, JSON.stringify(tasks, null, 2), "utf-8");
 
         return tasks[index];
-    };
+    }
 
 return {
     findAll,
@@ -65,4 +65,4 @@ return {
     remove,
     status
 }
-}
+};
