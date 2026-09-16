@@ -1,0 +1,20 @@
+Phase 3 - HTTP, Express, and REST
+Learn HTTP before relying on Express, then build organized routes and a complete in-memory CRUD API.
+Day 56 - HTTP Anatomy
+EASY  |  Client/server, method, URL, headers, body, status code, JSON
+Objective: Understand exactly what travels in an HTTP request and response.
+Challenge: Translate six real actions into HTTP requests and choose appropriate responses.
+Requirements
+    • Identify method, path, optional body, and status.
+    • Distinguish headers from body.
+    • Explain safe/idempotent behavior at a beginner level.
+Example: Create task -> POST /tasks with JSON -> 201 Created
+Starter code
+Request worksheet: METHOD /path
+Headers: ...
+Body: ...
+Expected status: ...
+Constraints
+    • Do not write Express code today.
+    • Justify every selected method and status.
+Bonus: Compare PUT and PATCH.
