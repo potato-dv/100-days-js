@@ -1,0 +1,16 @@
+MEDIUM  |  Route parameters, query strings, JSON body parsing
+Objective: Choose the correct place for each kind of client input.
+Challenge: Build search, detail, and create endpoints for books.
+Requirements
+    • GET /books/:id uses req.params.
+    • GET /books?author=&limit= uses req.query.
+    • POST /books reads req.body after express.json().
+Example: POST /books {"title":"Clean Code"} -> 201 with created record
+Starter code
+app.use(express.json());
+app.get("/books/:id", (req, res) => { /* ... */ });
+Constraints
+    • Convert numeric input explicitly.
+    • Never assume body fields exist.
+Bonus: Return a validation-error object listing missing fields.
+Main skill gained: Reading client input correctly—the source of most controller logic.
