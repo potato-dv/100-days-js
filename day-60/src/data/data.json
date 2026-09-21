@@ -1,0 +1,38 @@
+[
+    {
+        "id": 2,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": 1960
+    },
+    {
+        "id": 3,
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1948
+    },
+    {
+        "id": 4,
+        "title": "Node Js Ultimate",
+        "author": "Lauris Lorenzo",
+        "year": 2005
+    },
+    {
+        "id": 5,
+        "title": "Node Js Ultimate",
+        "author": "Lauris Lorenzo",
+        "year": 2005
+    },
+    {
+        "id": 6,
+        "title": "The new legacy",
+        "author": "Richard Moriel Gwapito",
+        "year": 2026
+    },
+    {
+        "id": 7,
+        "title": "The Brain",
+        "author": "Moriel Puge",
+        "year": 2026
+    }
+]
