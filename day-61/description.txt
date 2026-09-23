@@ -1,0 +1,17 @@
+MEDIUM  |  Resources, nouns, collections, representations, REST conventions
+Objective: Design endpoints before writing code.
+Challenge: Create an API contract for a student project tracker.
+Requirements
+    • Define routes for projects and tasks.
+    • Specify methods, request bodies, success statuses, and common errors.
+    • Keep route names noun-based.
+Example: PATCH /projects/:projectId/tasks/:taskId -> update selected task fields
+Starter code
+Resource: projects
+Collection: /projects
+Item: /projects/:projectId
+Constraints
+    • Avoid verbs such as /createProject.
+    • Do not add endpoints without a real client use case.
+Bonus: Add filtering and pagination rules.
+Main skill gained: Thinking in resources and contracts before implementation.
