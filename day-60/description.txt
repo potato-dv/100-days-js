@@ -1,0 +1,16 @@
+Day 60 - Status Codes and Response Contracts
+MEDIUM  |  2xx, 4xx, 5xx, consistent JSON responses, resource location
+Objective: Communicate success and failure clearly to API clients.
+Challenge: Repair an API that returns 200 for every result and uses inconsistent response shapes.
+Requirements
+    • Use 200, 201, 204, 400, 404, and 500 appropriately.
+    • Choose one success/error envelope style.
+    • Do not send a body with 204.
+Example: missing book -> 404 {error: {code: "BOOK_NOT_FOUND", message: "..."}}
+Starter code
+function sendError(res, status, code, message, details) { /* ... */ }
+Constraints
+    • A response must be sent once.
+    • Do not leak stack traces to clients.
+Bonus: Add a Location header after creation.
+Main skill gained: Designing reliable API responses that clients can depend on.
